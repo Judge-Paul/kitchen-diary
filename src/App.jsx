@@ -1,13 +1,28 @@
-import { useState } from 'react'
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 import Login from './pages/Login'
 import Register from './pages/Register'
 
-function App() {
-  return (
-    <div>
-      <Login />
-    </div>
-  )
-}
+const App = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Login /> },
+    { path: "login", element: <Login />},
+    { path: "register", element: <Register /> },
+  ]);
+  return routes;
+};
 
-export default App
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
+
+export default AppWrapper;
