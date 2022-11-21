@@ -5,8 +5,8 @@ import BG from '../assets/form-bg.png'
 
 const Login = () => {
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-                <form className="mt-6 lg:pl-20 px-10 py-12">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12">
+                <form className="mt-6 lg:pl-20 px-10 py-12 col-span-7">
                     <h4 className="text-4xl text-[#F67A24] font-bold pb-2 text-bold">Welcome back!</h4>
                     <h4 className="text-base pb-10">Login to your account to access our amazing features</h4>
                     <a href="#">
@@ -91,7 +91,7 @@ const Login = () => {
                         </a>
                     </p>
                 </form>
-                <img src={BG} alt="Kitchen Login Background Image" className="max-h-[800px] ml-auto hidden lg:block" />
+                <img src={BG} alt="Kitchen Login Background Image" className="max-h-[800px] ml-auto hidden lg:block col-span-5" />
         </div>
     )
 }
